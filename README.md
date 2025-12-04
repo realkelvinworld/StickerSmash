@@ -1,50 +1,78 @@
-# Welcome to your Expo app 👋
+# StickerSmash
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is my first React Native application using Expo that lets you pick images from your device gallery and add emoji stickers to them and you save and use. Built with TypeScript and modern React Native patterns.
 
-## Get started
+## Features
 
-1. Install dependencies
+- 📸 Pick images from your device gallery
+- ✨ Add emoji stickers to images
+- 🎨 Clean, intuitive UI with tab navigation
+- 📱 Cross-platform (iOS, Android, Web)
+
+## Tech Stack
+
+- **Framework**: React Native with Expo
+- **Language**: TypeScript
+- **Navigation**: Expo Router with bottom tab navigation
+- **Icons**: Expo Vector Icons (MaterialIcons, Ionicons, FontAwesome)
+- **Image Handling**: expo-image-picker, expo-image
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v20+)
+- pnpm (or npm/yarn)
+
+### Installation
+
+1. Install dependencies:
 
    ```bash
-   npm install
+   pnpm install
    ```
 
-2. Start the app
+2. Start the app:
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+3. Open in:
+   - **Expo Go**: Scan QR code with Expo Go app
+   - **Android Emulator**: Press `a`
+   - **iOS Simulator**: Press `i`
+   - **Web**: Press `w`
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Project Structure
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+```
+app/                    # App routes (Expo Router)
+├── (tabs)/             # Tab-based navigation
+│   ├── index.tsx       # Main screen (image + stickers)
+│   ├── about.tsx       # About screen
+│   └── _layout.tsx     # Tab layout config
+└── _layout.tsx         # Root layout
 
-## Get a fresh project
+components/            # Reusable components
+├── buttons/           # Button components
+├── emoji/             # Emoji picker component
+├── image-viewer.tsx   # Image display component
+└── index.ts          # Component exports
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+assets/               # Images and static assets
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Available Scripts
 
-## Learn more
+- `npm start` - Start the development server
+- `npm run android` - Run on Android emulator
+- `npm run ios` - Run on iOS simulator
+- `npm run web` - Run on web browser
+- `npm run lint` - Run ESLint
 
-To learn more about developing your project with Expo, look at the following resources:
+## Learn More
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [Expo Documentation](https://docs.expo.dev)
+- [React Native Docs](https://reactnative.dev)
+- [Expo Router Guide](https://docs.expo.dev/router/introduction)
